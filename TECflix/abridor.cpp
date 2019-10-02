@@ -6,7 +6,7 @@
 using namespace std;
 
 /*int main(){
-    ifstream ip("/home/allan/Desktop/TECflix/urls_portadas.text");
+    ifstream ip("/home/allan/Desktop/TECflix/urls_portadas.txt");
     string line;
     while(ip.good()){
         getline(ip,line,',');
