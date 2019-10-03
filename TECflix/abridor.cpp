@@ -5,15 +5,17 @@
 
 using namespace std;
 
-/*int main(){
-    ifstream ip("/home/allan/Desktop/TECflix/urls_portadas.txt");
-    string line;
-    while(ip.good()){
-        getline(ip,line,',');
-        if (line.substr(0,4).compare(("http"))==0){
-            cout<<line<<endl;
-        }
-    }
+ string get_line(int line_number){
+     ifstream ip("/home/allan/Desktop/TECflix/urls_portadas.txt");
+     string line;
+     int cont=0;
+     while(ip.good() and cont<line_number){
+         getline(ip,line,'\n');
+         cont++;
+     }
     ip.close();
-     return 0;
-}*/
+    cout<<"llego"<<endl;
+    cout<<line<<endl;
+    cout<<"llego"<<endl;
+    return line;
+}

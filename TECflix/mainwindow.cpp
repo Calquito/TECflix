@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "paginacion.h"
+#include "abridor.h"
+
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,7 +28,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    infinite_scroll= new Infinite_scroll(this);
-    infinite_scroll->show();
+
+    /*infinite_scroll= new Infinite_scroll(this);
+    infinite_scroll->show();*/
 }
 
