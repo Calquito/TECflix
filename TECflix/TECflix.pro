@@ -22,6 +22,7 @@ SOURCES += \
     intentos_de_paginacion.cpp \
     main.cpp \
     mainwindow.cpp \
+    memory_manager.cpp \
     paginacion.cpp \
     streaming.cpp
 
@@ -30,6 +31,7 @@ HEADERS += \
     filedownloader.h \
     infinite_scroll.h \
     mainwindow.h \
+    memory_manager.h \
     paginacion.h \
     streaming.h
 

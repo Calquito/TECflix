@@ -60,11 +60,15 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void set_paginador();
+
+    void actualizar_memoria();
+
 private:
     Ui::Paginacion *ui;
     Streaming *streaming;
 };
 
+#endif PAGINACION_H
 
 
-#endif // PAGINACION_H
