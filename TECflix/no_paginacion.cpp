@@ -13,7 +13,6 @@
 #include "memory_manager.h"
 #include <string>
 
-
 string all_dataset[5042];
 
 No_paginacion::No_paginacion(QWidget *parent) :
@@ -27,7 +26,10 @@ No_paginacion::~No_paginacion()
 {
     delete ui;
 }
-
+/**
+ * @brief carga todo el dataset
+ * @return Nada, todo se almacena en la variable all_dataset
+ */
 void charge_all_dataset(){
     ifstream ip("/home/allan/Desktop/TECflix-master/TECflix/urls_pelis.txt");
     string line;
@@ -39,7 +41,11 @@ void charge_all_dataset(){
     }
    ip.close();
 }
-
+/**
+ * @brief carga el webview, lo cual abre una ventana hacia el video
+ * @param linea indica cual linea de la base de datos debe abrir
+ * @return nada, abre una nueva ventana
+ */
 void No_paginacion::cargar_webview(int linea){
     string url=all_dataset[linea];
     QWebEngineView *view = new QWebEngineView(this);
@@ -48,7 +54,10 @@ void No_paginacion::cargar_webview(int linea){
 
 }
 
-
+/**
+ * @brief actualiza el label que muestra la memoria utilizada
+ * @return nada, modifica un label
+ */
 void No_paginacion::actualizar_memoria(){
     int consumed_kb=getValue();
     ui->label_2->setText("En uso:"+QString::number(consumed_kb)+"kb");
@@ -56,6 +65,12 @@ void No_paginacion::actualizar_memoria(){
 
 ///////////////////////////////////////////////////////////////
 //configurar iamgenes en los botones
+
+/**
+ * @brief Carga los datos obtenidos del request, los introduce en el pixmap y modifica la imagen del boton
+ * @param reply QNetworkReply son los datos extraidos del url
+ * @return Nada. Se modifican los botones
+ */
 void No_paginacion::downloadFinished(QNetworkReply *reply)
 {
     QPixmap pixmap;
@@ -128,7 +143,10 @@ void No_paginacion::downloadFinished16(QNetworkReply *reply)
     ui->pushButton_16->setIcon(ButtonIcon);
     ui->pushButton_16->setIconSize(QSize(ui->pushButton_16->width(), ui->pushButton_16->height()));
 }
-
+/**
+ * @brief obtiene la url de la imagen desde la base de datos, se conecta a internet y obtiene la imagen
+ * @return Nada. Se modifican los botones
+ */
 void No_paginacion::loadImage(){
     string image_url=get_line((pagina_3-1)*9 +1,1);
     QNetworkAccessManager *nam = new QNetworkAccessManager(this);
@@ -203,6 +221,10 @@ void No_paginacion::loadImage16(){
 }
 ///////////////////////////////////////////
 
+/**
+ * @brief carga la imagen en todos los botones
+ * @return nada, llama a la funcion que carga cada imagen individualmente
+ */
 void No_paginacion::load_all(){
     loadImage();
     loadImage10();
@@ -216,7 +238,11 @@ void No_paginacion::load_all(){
 }
 
 
-//configurar paginador
+
+/**
+ * @brief actualiza los valores del paginador
+ * @return nada
+ */
 void No_paginacion::set_paginador(){
     ui->pushButton_2->setText(QString::number(pagina_1));
     ui->pushButton_3->setText(QString::number(pagina_2));
@@ -226,6 +252,10 @@ void No_paginacion::set_paginador(){
 }
 
 //botones que abren las pestanas
+/**
+ * @brief abre una pestana con el video
+ * @return nada, abre pestana
+ */
 void No_paginacion::on_pushButton_clicked(){
     cargar_webview((pagina_3-1)*9 +1);
     actualizar_memoria();
@@ -286,7 +316,10 @@ void No_paginacion::on_pushButton_16_clicked()
 
 //botones que modifican el paginador
 
-
+/**
+ * @brief modifica el valor del paginador cuando es presionado
+ * @return nada
+ */
 void No_paginacion::on_pushButton_5_clicked()
 {
 

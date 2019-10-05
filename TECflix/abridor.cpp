@@ -4,7 +4,12 @@
 //#include <curl.h>
 
 using namespace std;
-
+/**
+ * @brief obtiene el url de una imagen o un video desde la base de datos
+ * @param line_number es el numero de la linea que se desea obtener
+ * @param file indica cual archivo se debe abrir
+ * @return retorna un string con la url solicitada
+ */
  string get_line(int line_number,int file){
      if(file==1){
          ifstream ip("/home/allan/Desktop/TECflix-master/TECflix/urls_portadas.txt");

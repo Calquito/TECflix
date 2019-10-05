@@ -38,6 +38,10 @@ Paginacion::~Paginacion()
 }
 
 //funciones "globales"
+/**
+ * @brief Actualiza el label con el consumo de memoria
+ * @return nada, se modifica el label
+ */
 void Paginacion::actualizar_memoria(){
     int consumed_kb=getValue();
     ui->label_2->setText("En uso:"+QString::number(consumed_kb)+"kb");
@@ -45,6 +49,11 @@ void Paginacion::actualizar_memoria(){
 
 ///////////////////////////////////////////////////////////////
 //configurar iamgenes en los botones
+/**
+ * @brief Carga los datos obtenidos del request, los introduce en el pixmap y modifica la imagen del boton
+ * @param reply QNetworkReply son los datos extraidos del url
+ * @return Nada. Se modifican los botones
+ */
 void Paginacion::downloadFinished(QNetworkReply *reply)
 {
     QPixmap pixmap;
@@ -117,6 +126,11 @@ void Paginacion::downloadFinished16(QNetworkReply *reply)
     ui->pushButton_16->setIcon(ButtonIcon);
     ui->pushButton_16->setIconSize(QSize(ui->pushButton_16->width(), ui->pushButton_16->height()));
 }
+
+/**
+ * @brief obtiene la url de la imagen desde la base de datos, se conecta a internet y obtiene la imagen
+ * @return Nada. Se modifican los botones
+ */
 
 void Paginacion::loadImage(){
     string image_url=get_line((pagina_3-1)*9 +1,1);
@@ -192,6 +206,10 @@ void Paginacion::loadImage16(){
 }
 ///////////////////////////////////////////
 
+/**
+ * @brief carga la imagen en todos los botones
+ * @return nada, llama a la funcion que carga cada imagen individualmente
+*/
 void Paginacion::load_all(){
     loadImage();
     loadImage10();
@@ -206,7 +224,11 @@ void Paginacion::load_all(){
 
 
 
-//abrir nueva ventana con el video
+/**
+ * @brief carga el webview, lo cual abre una ventana hacia el video
+ * @param linea indica cual linea de la base de datos debe abrir
+ * @return nada, abre una nueva ventana
+ */
 void Paginacion::load_webview(int linea){
     string url=get_line(linea,2);
     QWebEngineView *view = new QWebEngineView(streaming);
@@ -214,7 +236,10 @@ void Paginacion::load_webview(int linea){
     view->show();
 }
 
-//configurar paginador
+/**
+ * @brief actualiza los valores del paginador
+ * @return nada
+ */
 void Paginacion::set_paginador(){
     ui->pushButton_2->setText(QString::number(pagina_1));
     ui->pushButton_3->setText(QString::number(pagina_2));
@@ -223,7 +248,10 @@ void Paginacion::set_paginador(){
     ui->pushButton_8->setText(QString::number(pagina_5));
 }
 
-//botones que abren las pestanas
+/**
+ * @brief abre una pestana con el video
+ * @return nada, abre pestana
+ */
 void Paginacion::on_pushButton_clicked(){
     load_webview((pagina_3-1)*9 +1);
     actualizar_memoria();
@@ -284,7 +312,10 @@ void Paginacion::on_pushButton_16_clicked()
 
 //botones que modifican el paginador
 
-
+/**
+ * @brief modifica el valor del paginador cuando es presionado
+ * @return nada
+ */
 void Paginacion::on_pushButton_5_clicked()
 {
 

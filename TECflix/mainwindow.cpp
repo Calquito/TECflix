@@ -19,7 +19,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+/**
+ * @brief abre uno de los modos(paginacion, no paginacion o scroll)
+ * @return ninguno, solo abre una nueva ventana
+ */
 void MainWindow::on_pushButton_clicked()
 {
 

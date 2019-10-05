@@ -6,6 +6,11 @@
 
 extern int in_memory[3]={0,0,0};
 
+/**
+ * @brief obtiene la linea que indica la cantidad de memoria consumida
+ * @param line es la linea con la memoria consumida
+ * @return retorna la longitud de la linea obtenida
+ */
 int parseLine(char* line){
     // This assumes that a digit will be found and the line ends in " Kb".
     int i = strlen(line);
@@ -15,7 +20,10 @@ int parseLine(char* line){
     i = atoi(p);
     return i;
 }
-
+/**
+ * @brief obtiene el valor de memoria utilizada en kb
+ * @return retorna el resultado de la linea obtenida
+ */
 int getValue(){ //Note: this value is in KB!
     FILE* file = fopen("/proc/self/status", "r");
     int result = -1;
@@ -30,7 +38,10 @@ int getValue(){ //Note: this value is in KB!
     fclose(file);
     return result;
 }
-
+/**
+ * @brief carga las paginas en memoria
+ * @return nada
+ */
 void charge_pages(){
     if(pagina_3>2 and pagina_3<502){
         in_memory[0]=pagina_3-1;

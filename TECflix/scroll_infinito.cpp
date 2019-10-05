@@ -27,7 +27,11 @@ Scroll_infinito::~Scroll_infinito()
 {
     delete ui;
 }
-
+/**
+ * @brief Carga los datos obtenidos del request, los introduce en el pixmap y modifica la imagen del boton
+ * @param reply QNetworkReply son los datos extraidos del url
+ * @return Nada. Se modifican los botones
+ */
 ////////////////////////////////////////////////////////////////
 void Scroll_infinito::downloadFinished2(QNetworkReply *reply)
 {
@@ -101,7 +105,10 @@ void Scroll_infinito::downloadFinished10(QNetworkReply *reply)
     ui->pushButton_10->setIcon(ButtonIcon);
     ui->pushButton_10->setIconSize(QSize(ui->pushButton_10->width(), ui->pushButton_10->height()));
 }
-
+/**
+ * @brief obtiene la url de la imagen desde la base de datos, se conecta a internet y obtiene la imagen
+ * @return Nada. Se modifican los botones
+ */
 void Scroll_infinito::loadImage2(){
     string image_url=get_line(scroll_page*9 +1,1);
     QNetworkAccessManager *nam = new QNetworkAccessManager(this);
@@ -175,7 +182,10 @@ void Scroll_infinito::loadImage10(){
     nam->get(request);
 }
 /////////////////////////////////////////////////////////////////////////
-
+/**
+ * @brief carga la imagen en todos los botones
+ * @return nada, llama a la funcion que carga cada imagen individualmente
+*/
 void Scroll_infinito::load_all(){
     loadImage2();
     loadImage3();
@@ -191,7 +201,10 @@ void Scroll_infinito::load_all(){
 
 
 
-//mover scroll
+/**
+ * @brief mueve el scroll
+ * @return nada, llama a la funcion que carga cada imagen individualmente
+*/
 void Scroll_infinito::on_pushButton_pressed()
 {
     scroll_cont=scroll_cont+20;
