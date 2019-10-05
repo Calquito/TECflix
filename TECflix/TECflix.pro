@@ -18,27 +18,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     abridor.cpp \
     filedownloader.cpp \
-    infinite_scroll.cpp \
     intentos_de_paginacion.cpp \
     main.cpp \
     mainwindow.cpp \
     memory_manager.cpp \
     paginacion.cpp \
+    scroll_infinito.cpp \
     streaming.cpp
 
 HEADERS += \
     abridor.h \
     filedownloader.h \
-    infinite_scroll.h \
     mainwindow.h \
     memory_manager.h \
     paginacion.h \
+    scroll_infinito.h \
     streaming.h
 
 FORMS += \
-    infinite_scroll.ui \
     mainwindow.ui \
     paginacion.ui \
+    scroll_infinito.ui \
     streaming.ui
 
 # Default rules for deployment.

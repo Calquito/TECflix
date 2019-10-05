@@ -69,6 +69,6 @@ private:
     Streaming *streaming;
 };
 
-#endif PAGINACION_H
+#endif // PAGINACION_H
 
 

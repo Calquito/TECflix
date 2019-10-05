@@ -14,8 +14,5 @@ using namespace std;
          cont++;
      }
     ip.close();
-    cout<<"llego"<<endl;
-    cout<<line<<endl;
-    cout<<"llego"<<endl;
     return line;
 }

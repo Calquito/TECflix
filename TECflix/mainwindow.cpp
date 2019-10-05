@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "paginacion.h"
 #include "abridor.h"
+#include "scroll_infinito.h"
 
 using namespace std;
 
@@ -28,8 +29,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-
-    /*infinite_scroll= new Infinite_scroll(this);
-    infinite_scroll->show();*/
+    scroll_infinito= new Scroll_infinito(this);
+    scroll_infinito->show();
 }
 
