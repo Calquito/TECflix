@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <filedownloader.h>
 #include "streaming.h"
+#include "abridor.h"
 
 extern int pagina_1;
 extern int pagina_2;
@@ -29,6 +30,26 @@ private slots:
     void on_pushButton_7_clicked();
 
     void loadImage();
+    void loadImage10();
+    void loadImage11();
+    void loadImage13();
+    void loadImage9();
+    void loadImage14();
+    void loadImage12();
+    void loadImage15();
+    void loadImage16();
+
+    void downloadFinished(QNetworkReply *reply);
+    void downloadFinished10(QNetworkReply *reply);
+    void downloadFinished11(QNetworkReply *reply);
+    void downloadFinished13(QNetworkReply *reply);
+    void downloadFinished9(QNetworkReply *reply);
+    void downloadFinished14(QNetworkReply *reply);
+    void downloadFinished12(QNetworkReply *reply);
+    void downloadFinished15(QNetworkReply *reply);
+    void downloadFinished16(QNetworkReply *reply);
+
+    void load_all();
 
     void load_webview(int linea);
 
@@ -63,6 +84,10 @@ private slots:
     void set_paginador();
 
     void actualizar_memoria();
+
+
+
+
 
 private:
     Ui::Paginacion *ui;

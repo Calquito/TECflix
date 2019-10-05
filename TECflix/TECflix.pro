@@ -1,8 +1,13 @@
+TEMPLATE = app
+TARGET = curl
 QT       += core gui network  widgets webenginewidgets webengine multimediawidgets multimedia multimediawidgets webengine
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+
+# CONFIG += link_pkgconfig
+# PKGCONFIG += curl
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -33,6 +38,7 @@ HEADERS += \
     memory_manager.h \
     paginacion.h \
     scroll_infinito.h \
+    curl.h\
     streaming.h
 
 FORMS += \

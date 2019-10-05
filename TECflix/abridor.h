@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 using namespace std;
-string get_line(int line_number);
+string get_line(int line_number,int file);
 
 class abridor
 {
