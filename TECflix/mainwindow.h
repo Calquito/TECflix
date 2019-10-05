@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "paginacion.h"
 #include "scroll_infinito.h"
+#include "no_paginacion.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,9 +23,12 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     Scroll_infinito *scroll_infinito;
     Paginacion *paginacion;
+    No_paginacion *no_paginacion;
 };
 #endif // MAINWINDOW_H

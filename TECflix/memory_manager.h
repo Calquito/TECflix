@@ -7,6 +7,8 @@
 
 int getValue();
 
+extern int in_memory[3];
+
 class memory_manager
 {
 public:

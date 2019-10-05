@@ -18,7 +18,7 @@ using namespace std;
         return line;
      }
      else {
-         ifstream ip("/home/allan/Desktop/TECflix/urls_portadas.txt");
+         ifstream ip("/home/allan/Desktop/TECflix-master/TECflix/urls_pelis.txt");
          string line;
          int cont=0;
          while(ip.good() and cont<line_number){

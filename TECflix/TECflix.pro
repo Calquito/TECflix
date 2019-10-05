@@ -27,6 +27,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     memory_manager.cpp \
+    no_paginacion.cpp \
     paginacion.cpp \
     scroll_infinito.cpp \
     streaming.cpp
@@ -36,6 +37,7 @@ HEADERS += \
     filedownloader.h \
     mainwindow.h \
     memory_manager.h \
+    no_paginacion.h \
     paginacion.h \
     scroll_infinito.h \
     curl.h\
@@ -43,6 +45,7 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui \
+    no_paginacion.ui \
     paginacion.ui \
     scroll_infinito.ui \
     streaming.ui

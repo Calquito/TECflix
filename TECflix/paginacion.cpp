@@ -13,8 +13,6 @@
 #include <QtWebEngineWidgets/QtWebEngineWidgets>
 #include "memory_manager.h"
 #include <string>
-#include <QMediaPlayer>
-#include <QVideoWidget>
 
 //5042
 int pagina_1=1;
@@ -22,6 +20,7 @@ int pagina_2=2;
 int pagina_3=3;
 int pagina_4=4;
 int pagina_5=5;
+
 
 Paginacion::Paginacion(QWidget *parent) :
     QMainWindow(parent),
@@ -44,6 +43,7 @@ void Paginacion::actualizar_memoria(){
     ui->label_2->setText("En uso:"+QString::number(consumed_kb)+"kb");
 }
 
+///////////////////////////////////////////////////////////////
 //configurar iamgenes en los botones
 void Paginacion::downloadFinished(QNetworkReply *reply)
 {
@@ -190,6 +190,7 @@ void Paginacion::loadImage16(){
     QNetworkRequest request(url);
     nam->get(request);
 }
+///////////////////////////////////////////
 
 void Paginacion::load_all(){
     loadImage();
@@ -207,7 +208,7 @@ void Paginacion::load_all(){
 
 //abrir nueva ventana con el video
 void Paginacion::load_webview(int linea){
-    string url=get_line(linea,1);
+    string url=get_line(linea,2);
     QWebEngineView *view = new QWebEngineView(streaming);
     view->load(QUrl(QString::fromStdString(url)));
     view->show();

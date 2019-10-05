@@ -25,6 +25,7 @@ class Paginacion : public QMainWindow
 public:
     explicit Paginacion(QWidget *parent = nullptr);
     ~Paginacion();
+     void load_all();
 
 private slots:
     void on_pushButton_7_clicked();
@@ -48,8 +49,6 @@ private slots:
     void downloadFinished12(QNetworkReply *reply);
     void downloadFinished15(QNetworkReply *reply);
     void downloadFinished16(QNetworkReply *reply);
-
-    void load_all();
 
     void load_webview(int linea);
 

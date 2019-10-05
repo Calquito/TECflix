@@ -2,6 +2,9 @@
 #include "stdlib.h"
 #include "stdio.h"
 #include "string.h"
+#include "paginacion.h"
+
+extern int in_memory[3]={0,0,0};
 
 int parseLine(char* line){
     // This assumes that a digit will be found and the line ends in " Kb".
@@ -26,4 +29,25 @@ int getValue(){ //Note: this value is in KB!
     }
     fclose(file);
     return result;
+}
+
+void charge_pages(){
+    if(pagina_3>2 and pagina_3<502){
+        in_memory[0]=pagina_3-1;
+        in_memory[1]=pagina_3;
+        in_memory[2]=pagina_3+1;
+    }
+    else if(pagina_3<2 and pagina_3<502){
+        in_memory[0]=504;
+        in_memory[1]=pagina_3;
+        in_memory[2]=pagina_3+1;
+
+    }
+    else if(pagina_3>2 and pagina_3>502){
+        in_memory[0]=pagina_3-1;
+        in_memory[1]=pagina_3;
+        in_memory[2]=1;
+
+    }
+
 }
