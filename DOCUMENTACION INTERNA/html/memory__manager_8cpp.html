@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TECflix: Referencia del Archivo memory_manager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TECflix
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Aplicación para visualizar tráilers de películas y series</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('memory__manager_8cpp.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo memory_manager.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="memory__manager_8h_source.html">memory_manager.h</a>&quot;</code><br />
+<code>#include &quot;stdlib.h&quot;</code><br />
+<code>#include &quot;stdio.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="paginacion_8h_source.html">paginacion.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a15c9d2632e2f042d7a242846ff2767fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__manager_8cpp.html#a15c9d2632e2f042d7a242846ff2767fa">parseLine</a> (char *line)</td></tr>
+<tr class="memdesc:a15c9d2632e2f042d7a242846ff2767fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">obtiene la linea que indica la cantidad de memoria consumida  <a href="#a15c9d2632e2f042d7a242846ff2767fa">Más...</a><br /></td></tr>
+<tr class="separator:a15c9d2632e2f042d7a242846ff2767fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae714dc01fe7f5bb1a175d0d1068bb92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__manager_8cpp.html#aae714dc01fe7f5bb1a175d0d1068bb92">getValue</a> ()</td></tr>
+<tr class="memdesc:aae714dc01fe7f5bb1a175d0d1068bb92"><td class="mdescLeft">&#160;</td><td class="mdescRight">obtiene el valor de memoria utilizada en kb  <a href="#aae714dc01fe7f5bb1a175d0d1068bb92">Más...</a><br /></td></tr>
+<tr class="separator:aae714dc01fe7f5bb1a175d0d1068bb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65dc2948d837990e810e89d24996005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__manager_8cpp.html#ab65dc2948d837990e810e89d24996005">charge_pages</a> ()</td></tr>
+<tr class="memdesc:ab65dc2948d837990e810e89d24996005"><td class="mdescLeft">&#160;</td><td class="mdescRight">carga las paginas en memoria  <a href="#ab65dc2948d837990e810e89d24996005">Más...</a><br /></td></tr>
+<tr class="separator:ab65dc2948d837990e810e89d24996005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a38386772551b511a659b4d21b9592d53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a> [3] ={0,0,0}</td></tr>
+<tr class="separator:a38386772551b511a659b4d21b9592d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="ab65dc2948d837990e810e89d24996005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65dc2948d837990e810e89d24996005">&#9670;&nbsp;</a></span>charge_pages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void charge_pages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>carga las paginas en memoria </p>
+<dl class="section return"><dt>Devuelve</dt><dd>nada </dd></dl>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                   {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>&gt;2 and <a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>&lt;502){</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[0]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>-1;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[1]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[2]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>+1;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>&lt;2 and <a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>&lt;502){</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[0]=504;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[1]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[2]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>+1;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>&gt;2 and <a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>&gt;502){</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[0]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>-1;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[1]=<a class="code" href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a>[2]=1;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div><div class="ttc" id="memory__manager_8cpp_html_a38386772551b511a659b4d21b9592d53"><div class="ttname"><a href="memory__manager_8cpp.html#a38386772551b511a659b4d21b9592d53">in_memory</a></div><div class="ttdeci">int in_memory[3]</div></div>
+<div class="ttc" id="no__paginacion_8h_html_a82825caf928cda5eeee2f9b895c7a944"><div class="ttname"><a href="no__paginacion_8h.html#a82825caf928cda5eeee2f9b895c7a944">pagina_3</a></div><div class="ttdeci">int pagina_3</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aae714dc01fe7f5bb1a175d0d1068bb92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae714dc01fe7f5bb1a175d0d1068bb92">&#9670;&nbsp;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>obtiene el valor de memoria utilizada en kb </p>
+<dl class="section return"><dt>Devuelve</dt><dd>retorna el resultado de la linea obtenida </dd></dl>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;              { <span class="comment">//Note: this value is in KB!</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    FILE* file = fopen(<span class="stringliteral">&quot;/proc/self/status&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> result = -1;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">char</span> line[128];</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span> (fgets(line, 128, file) != NULL){</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (strncmp(line, <span class="stringliteral">&quot;VmSize:&quot;</span>, 7) == 0){</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            result = <a class="code" href="memory__manager_8cpp.html#a15c9d2632e2f042d7a242846ff2767fa">parseLine</a>(line);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    fclose(file);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div><div class="ttc" id="memory__manager_8cpp_html_a15c9d2632e2f042d7a242846ff2767fa"><div class="ttname"><a href="memory__manager_8cpp.html#a15c9d2632e2f042d7a242846ff2767fa">parseLine</a></div><div class="ttdeci">int parseLine(char *line)</div><div class="ttdoc">obtiene la linea que indica la cantidad de memoria consumida</div><div class="ttdef"><b>Definition:</b> memory_manager.cpp:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a15c9d2632e2f042d7a242846ff2767fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c9d2632e2f042d7a242846ff2767fa">&#9670;&nbsp;</a></span>parseLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseLine </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>obtiene la linea que indica la cantidad de memoria consumida </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>es la linea con la memoria consumida </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>retorna la longitud de la linea obtenida </dd></dl>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                         {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// This assumes that a digit will be found and the line ends in &quot; Kb&quot;.</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> i = strlen(line);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* p = line;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span> (*p &lt;&#39;0&#39; || *p &gt; <span class="charliteral">&#39;9&#39;</span>) p++;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    line[i-3] = <span class="charliteral">&#39;\0&#39;</span>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    i = atoi(p);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> i;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="a38386772551b511a659b4d21b9592d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38386772551b511a659b4d21b9592d53">&#9670;&nbsp;</a></span>in_memory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int in_memory[3] ={0,0,0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="memory__manager_8cpp.html">memory_manager.cpp</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>
